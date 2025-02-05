@@ -61,7 +61,7 @@ void setup() {
       html += "<p><strong>Error:</strong> Gagal membaca sensor!</p>";
     } else {
       html += "<p><strong>Kelembaban:</strong> " + String(humi) + "%</p>";
-      html += "<p><strong>Suhu:</strong> " + String(tempC) + "°C / " + String(tempF) + "°F</p>";
+      html += "<p><strong>Suhu:</strong> " + String(tempC, 2) + "&deg;C  ~  " + String(tempF, 2) + "&deg;F</p>";
     }
     html += "</body></html>";
 
