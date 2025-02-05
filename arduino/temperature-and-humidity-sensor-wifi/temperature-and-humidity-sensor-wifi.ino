@@ -57,8 +57,7 @@ void setup() {
 
   // Rute Web Server untuk halaman utama
   server.on("/", []() {
-    String html = "<html><head><title>ESP8266 DHT22</title>";
-    html += "<meta http-equiv='refresh' content='2'>";
+    String html = "<html><head><meta charset='UTF-8'><title>ESP8266 DHT22</title>";
     html += "<script>";
     html += "function updateData() {";
     html += " fetch('/data')";  // Ambil data JSON dari ESP8266
