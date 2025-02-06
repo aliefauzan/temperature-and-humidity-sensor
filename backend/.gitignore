@@ -1,0 +1,29 @@
+# Binaries dan executable
+/bin/
+/src/main
+
+# Go modules
+/go.mod
+/go.sum
+/vendor/
+
+# Cache dan temporary files
+/*.log
+/tmp/
+backend/.DS_Store
+backend/.env
+
+# Database dumps
+/database/*.sql
+/database/*.db
+/database/*.log
+
+# Docker
+/docker-compose.override.yml
+/.dockerignore
+
+# Editor dan sistem file
+.vscode/
+.idea/
+*.swp
+*.swo
