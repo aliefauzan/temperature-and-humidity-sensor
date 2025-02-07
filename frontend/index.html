@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/raphael/raphael.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/justgage/justgage.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <style>
+    .card {
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">Sensor Dashboard</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <!-- Gauge for Temperature -->
+      <div class="card bg-white shadow-lg rounded-lg p-4">
+        <h2 class="text-xl font-semibold mb-4 text-center">Current Temperature</h2>
+        <div id="temperatureGauge" class="w-full h-48"></div>
+      </div>
+
+      <!-- Line Chart for Temperature -->
+      <div class="card bg-white shadow-lg rounded-lg p-4">
+        <h2 class="text-xl font-semibold mb-4 text-center">Temperature Statistics</h2>
+        <canvas id="temperatureChart"></canvas>
+      </div>
+
+      <!-- Line Chart for Humidity -->
+      <div class="card bg-white shadow-lg rounded-lg p-4">
+        <h2 class="text-xl font-semibold mb-4 text-center">Humidity Statistics</h2>
+        <canvas id="humidityChart"></canvas>
+      </div>
+
+      <!-- Gauge for Humidity -->
+      <div class="card bg-white shadow-lg rounded-lg p-4">
+        <h2 class="text-xl font-semibold mb-4 text-center">Current Humidity</h2>
+        <div id="humidityGauge" class="w-full h-48"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
