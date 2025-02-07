@@ -11,7 +11,6 @@ import (
 )
 
 func main() {
-	// Koneksi ke database MySQL
 	err := model.ConnectDB()
 	if err != nil {
 		log.Fatal("Failed to connect to database:", err)
@@ -19,6 +18,10 @@ func main() {
 
 	// Setup router
 	r := mux.NewRouter()
+	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello, World!")
+	}).Methods("GET")
+	
 	r.HandleFunc("/data", handler.GetData).Methods("GET")
 	r.HandleFunc("/update", handler.UpdateData).Methods("POST")
 
